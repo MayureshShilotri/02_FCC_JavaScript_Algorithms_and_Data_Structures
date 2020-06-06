@@ -45,9 +45,11 @@ var translationTable = {
   "1000":	"M"
 }
 
-
 function highestRoman(n) {
     let arr = [1,4,5,9,10,40,50,90,100,400,500,500,900,1000];
+    if (contains(arr,n) != -1) {
+      return translationTable[arr[contains(arr,n)]];
+    }
     arr.push(n);
     arr.sort(function(a, b){return a - b});
     //console.log(arr.indexOf(6));
@@ -66,7 +68,7 @@ function contains(arr, element) {
 //console.log(highestRoman(4));
 
 
-convertToRoman(4);
+convertToRoman(36);
 
 /*
 console.log(convertToRoman(2) === "II");
