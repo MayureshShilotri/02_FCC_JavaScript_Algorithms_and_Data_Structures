@@ -100,8 +100,8 @@ function telephoneCheck(str) {
   // Characters like (- in opening or end
   let beginQues = /\b\(/;
   let endQues = /\)\b/;
-  let beginHyp = /\b\--/;
-  let endHyp = /\--\b/;
+  let beginHyp = /\b-/;
+  let endHyp = /-\b/;
 
 //  console.log("beginQues.test(str): " + beginQues.test(str));
 //  console.log("endQues.test(str): " + endQues.test(str));
